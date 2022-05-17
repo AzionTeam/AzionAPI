@@ -7,7 +7,7 @@ import java.util.List;
 
 public class ListenerManager {
 
-    private List<AzionListener> listeners = new ArrayList<>();
+    private final List<AzionListener> listeners = new ArrayList<>();
 
     public void addListener(AzionListener toAdd) {
         listeners.add(toAdd);
