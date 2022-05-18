@@ -6,8 +6,11 @@ To add the api to your plugin that's will be more complicated than usual because
 
 ### Maven
 
-For authentificate you with maven you need to create an `settings.xml` in your `C:\Users\<You>\.m2\the-file-you-need-to-create.xml`.
-If the file already exist don't delete it.
+For authentificate you with maven you need to create an `settings.xml` just like the picture below.
+
+![alt text](https://github.com/AzionTeam/AzionAPI/blob/main/libs/pictures/maven-config.png?raw=true)
+
+
 When you have your settings file just copy the text below and replace `GITHUB_USERNAME`.
 You need to replace `GITHUB_TOKEN` with you personal access token. If you don't know how to create an access token -> [Create a token](https://github.com/settings/tokens/new)
 ```xml

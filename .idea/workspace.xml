@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84ec2129-45d8-4eba-a6eb-dfcb3be22d5b" name="Changes" comment="Update to snapshot 1.4">
+    <list default="true" id="84ec2129-45d8-4eba-a6eb-dfcb3be22d5b" name="Changes" comment="Update README.md for snapshot 1.4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -279,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652891589265</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Update README.md for snapshot 1.4">
+      <created>1652892868927</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1652892868927</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -311,6 +318,7 @@
     <MESSAGE value="Rework" />
     <MESSAGE value="Update dependency craftbukkit" />
     <MESSAGE value="Update to snapshot 1.4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update to snapshot 1.4" />
+    <MESSAGE value="Update README.md for snapshot 1.4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update README.md for snapshot 1.4" />
   </component>
 </project>
