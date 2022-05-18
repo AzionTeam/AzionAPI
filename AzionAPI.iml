@@ -45,6 +45,6 @@
     <orderEntry type="library" name="Maven: org.json:json:20090211" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.github.MilkBowl:VaultAPI:1.7" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.bukkit:bukkit:1.13.1-R0.1-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: org.craftbukkit:craftbukkit:1.8.8-R0.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: com.github.azbh111:craftbukkit-1.8.8:R" level="project" />
   </component>
 </module>

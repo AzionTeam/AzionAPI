@@ -22,10 +22,6 @@
   </properties>
   <repositories>
         <repository>
-          <id>local-maven-repo</id>
-          <url>file:///${project.basedir}/libs</url>
-        </repository>
-        <repository>
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
         </repository>
@@ -70,10 +66,9 @@
         <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>org.craftbukkit</groupId>
-      <artifactId>craftbukkit</artifactId>
-      <version>1.8.8-R0.1-SNAPSHOT</version>
-      <scope>compile</scope>
+      <groupId>com.github.azbh111</groupId>
+      <artifactId>craftbukkit-1.8.8</artifactId>
+      <version>R</version>
     </dependency>
   </dependencies>
   <build>
