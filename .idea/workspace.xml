@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84ec2129-45d8-4eba-a6eb-dfcb3be22d5b" name="Changes" comment="Try to fix 5">
+    <list default="true" id="84ec2129-45d8-4eba-a6eb-dfcb3be22d5b" name="Changes" comment="Rework">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652816883166</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Rework">
+      <created>1652818253092</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1652818253093</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -272,6 +280,7 @@
     <MESSAGE value="Try to fix 3" />
     <MESSAGE value="Try to fix 4" />
     <MESSAGE value="Try to fix 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="Try to fix 5" />
+    <MESSAGE value="Rework" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rework" />
   </component>
 </project>
