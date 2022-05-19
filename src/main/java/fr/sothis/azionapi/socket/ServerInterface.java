@@ -16,6 +16,11 @@ public class ServerInterface {
             Report report = AzionAPI.getInstance().getReportManager().getReport((String) args[0]);
             listenerManager.deflectReportListener(report);
         });
+
+
     }
 
+    public Socket getSocket() {
+        return socket;
+    }
 }

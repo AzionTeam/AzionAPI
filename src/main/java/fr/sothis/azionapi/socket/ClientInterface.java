@@ -17,4 +17,12 @@ public class ClientInterface {
             Bukkit.getLogger().info("Sending creation report");
         });
     }
+
+    public void sendRequestInstantiation(String name) {
+        socket.emit("api", 1, name);
+    }
+
+    public Socket getSocket() {
+        return socket;
+    }
 }

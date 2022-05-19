@@ -60,7 +60,7 @@ After that a basic installation of a dependency
   <dependency>
     <groupId>fr.sothis.azionapi</groupId>
     <artifactId>azionapi</artifactId>
-    <version>1.4-SNAPSHOT</version>
+    <version>1.5-SNAPSHOT</version>
   </dependency>
 ```
 
@@ -84,8 +84,28 @@ repositories {
 And after you just add the implementation
 
 ```groovy
-implementation group: 'fr.sothis.azionapi', name: 'azionapi', version: '1.4-SNAPSHOT'
+implementation group: 'fr.sothis.azionapi', name: 'azionapi', version: '1.5-SNAPSHOT'
 ```
+
+## Managing API
+
+The API need to be start and stop so you gets that method :
+
+```java
+public class Main extends JavaPlugin {
+
+    @Override
+    public void onEnable() {
+        AzionAPI.start(this, "The Name Of Your Plugin");
+    }
+
+    @Override
+    public void onDisable() {
+        AzionAPI.stop();
+    }
+}
+```
+
 ## Tool Box
 
 ### Tools :

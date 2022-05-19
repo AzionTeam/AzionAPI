@@ -14,6 +14,7 @@ import fr.sothis.azionapi.managers.UserManager;
 import fr.sothis.azionapi.socket.Sockets;
 import fr.sothis.azionapi.tools.title.TitleBuilder;
 import fr.sothis.azionapi.tools.title.TitleOptions;
+import fr.sothis.azionapi.utils.Communication;
 import net.milkbowl.vault.chat.Chat;
 import net.milkbowl.vault.economy.Economy;
 import net.milkbowl.vault.permission.Permission;
@@ -32,6 +33,7 @@ public class AzionAPI {
 
     private static AzionAPI instance;
     private static Sockets sockets;
+    private static Communication communication;
 
     private static DatabaseManager databaseManager;
     private static ListenerManager listenerManager;
@@ -65,6 +67,8 @@ public class AzionAPI {
         userManager = new UserManager(databaseManager, econ);
         gradeManager = new GradeManager(databaseManager);
         sockets = new Sockets(listenerManager);
+        communication = new Communication(sockets, plug);
+        communication.start(name);
         reportManager = new ReportManager(databaseManager, listenerManager, sockets);
 
         registerEvent();
