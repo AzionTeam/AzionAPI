@@ -35,8 +35,10 @@ public class DatabaseManager {
         CodecProvider pojoCodecProvider = PojoCodecProvider.builder().automatic(true)
                 .conventions(Arrays.asList(Conventions.ANNOTATION_CONVENTION, Conventions.USE_GETTERS_FOR_SETTERS))
                 .build();
+        // pPekYpdZCtpAJKeq
+        // u38ehgx5e1qedtUf
         CodecRegistry codecRegistry = fromRegistries(getDefaultCodecRegistry(), fromProviders(pojoCodecProvider));
-        mongoClient = MongoClients.create("mongodb://192.168.11.201:27017/?tls=false");
+        mongoClient = MongoClients.create("mongodb+srv://api:pPekYpdZCtpAJKeq@azionapitest.4alqq.mongodb.net/?retryWrites=true&w=majority");
         mongoDatabase = mongoClient.getDatabase("azion").withCodecRegistry(codecRegistry);
         users = mongoDatabase.getCollection("users", User.class);
         grades = mongoDatabase.getCollection("grades", Grade.class);
