@@ -36,7 +36,7 @@ public class DatabaseManager {
                 .conventions(Arrays.asList(Conventions.ANNOTATION_CONVENTION, Conventions.USE_GETTERS_FOR_SETTERS))
                 .build();
         CodecRegistry codecRegistry = fromRegistries(getDefaultCodecRegistry(), fromProviders(pojoCodecProvider));
-        mongoClient = MongoClients.create("credentials");
+        mongoClient = MongoClients.create("mongodb://192.168.11.201:27017/Azion?tls=false");
         mongoDatabase = mongoClient.getDatabase("azion").withCodecRegistry(codecRegistry);
         users = mongoDatabase.getCollection("users", User.class);
         grades = mongoDatabase.getCollection("grades", Grade.class);
