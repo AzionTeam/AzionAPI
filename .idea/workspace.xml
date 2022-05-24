@@ -4,8 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84ec2129-45d8-4eba-a6eb-dfcb3be22d5b" name="Changes" comment="Update To 1.6">
+    <list default="true" id="84ec2129-45d8-4eba-a6eb-dfcb3be22d5b" name="Changes" comment="Update To 1.8">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_bson_4_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_bson_record_codec_4_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_core_4_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_sync_4_6_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongo_java_driver_3_12_11.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AzionAPI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AzionAPI.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/sothis/azionapi/database/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/sothis/azionapi/database/DatabaseManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -112,6 +120,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Documents/GitHub/Taa2" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -347,7 +356,21 @@
       <option name="project" value="LOCAL" />
       <updated>1653330407481</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Update DatabaseManager.java">
+      <created>1653333386551</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1653333386551</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Update To 1.8">
+      <created>1653333472528</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1653333472528</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -383,6 +406,8 @@
     <MESSAGE value="Update README.md" />
     <MESSAGE value="Update Credentials API" />
     <MESSAGE value="Update To 1.6" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update To 1.6" />
+    <MESSAGE value="Update DatabaseManager.java" />
+    <MESSAGE value="Update To 1.8" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update To 1.8" />
   </component>
 </project>

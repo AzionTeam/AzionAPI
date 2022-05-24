@@ -35,11 +35,16 @@ public class DatabaseManager {
         CodecProvider pojoCodecProvider = PojoCodecProvider.builder().automatic(true)
                 .conventions(Arrays.asList(Conventions.ANNOTATION_CONVENTION, Conventions.USE_GETTERS_FOR_SETTERS))
                 .build();
-        // pPekYpdZCtpAJKeq
-        // u38ehgx5e1qedtUf
+        String uri = "mongodb://Admin:wH7S%26Cofose6TP@192.168.11.201:27017/?authMechanism=DEFAULT" +
+            "&tls=false" +
+            "&zlibCompressionLevel=-1" +
+            "&maxPoolSize=1000" +
+            "&appName=default" +
+            "&directConnection=true" +
+            "&w=majority";
         CodecRegistry codecRegistry = fromRegistries(getDefaultCodecRegistry(), fromProviders(pojoCodecProvider));
-        mongoClient = MongoClients.create("mongodb+srv://api:pPekYpdZCtpAJKeq@azionapitest.4alqq.mongodb.net/?retryWrites=true&w=majority");
-        mongoDatabase = mongoClient.getDatabase("azion").withCodecRegistry(codecRegistry);
+        mongoClient = MongoClients.create(uri);
+        mongoDatabase = mongoClient.getDatabase("Azion").withCodecRegistry(codecRegistry);
         users = mongoDatabase.getCollection("users", User.class);
         grades = mongoDatabase.getCollection("grades", Grade.class);
         reports = mongoDatabase.getCollection("reports", Report.class);
