@@ -2,11 +2,11 @@
 
 ## Install the API
 
-To add the api to your plugin that's will be more complicated than usual because you need to authentificate you to github for download the api
+Adding the API to your plugin will be more complicated than usual because you need to authentificate you to github to download it
 
 ### Maven
 
-For authentificate you with maven you need to create an `settings.xml` just like the picture below.
+For the authentification with maven you need to create a `settings.xml` just like the picture below.
 
 ![plot](./libs/pictures/maven-config.PNG)
 
@@ -65,7 +65,7 @@ After that a basic installation of a dependency
 ```
 
 ### Gradle
-For authentificate you with gradle just copy the text below and replace `GITHUB_USERNAME`.
+To authentificate yourself with gradle just copy the text below and replace `GITHUB_USERNAME`.
 You need to replace `GITHUB_TOKEN` with you personal access token. If you don't know how to create an access token -> [Create a token](https://github.com/settings/tokens/new)
 
 ```groovy
@@ -89,7 +89,7 @@ implementation group: 'fr.sothis.azionapi', name: 'azionapi', version: '1.5-SNAP
 
 ## Managing API
 
-The API need to be start and stop so you gets that method :
+The API needs to be started and stopped so you gets that method :
 
 ```java
 public class Main extends JavaPlugin {
@@ -114,13 +114,13 @@ public class Main extends JavaPlugin {
 
 ### Title Generator
 
-Can just have to use this line to send a title :
+You just have to use this line to send a title :
 
 ```java
 AzionAPI.getInstance().sendTitle(player, title, chatColorTitle, subtitle, chatColorSubTitle, options);
 ```
 
-Has you can see, I add options to parameters. You can just modify the fadeIn, stay and the fadeOut of the title.
+As you can see, I add options to parameters. You can just modify the fadeIn, stay and the fadeOut of the title.
 
 ```java
 new TitleOptions(fadeIn: 2,stay: 5,fadeOut: 10)
@@ -128,8 +128,8 @@ new TitleOptions(fadeIn: 2,stay: 5,fadeOut: 10)
 
 ### Item Builder
 
-I add my personal ItemBuilder to the API.
-For create an itemstack you just have to do this :
+I added my personal ItemBuilder to the API.
+To create an itemstack you just have to do this :
 
 ```java
 ItemStack item = new ItemBuilder(material).toItemStack();
@@ -141,8 +141,8 @@ Just watch the class [ItemBuilder](https://github.com/AzionMC-team/Azion-API/blo
 
 ### Managers
 
-With the api you can edit or get user or grade and other in the future.
-To the access to the manager you just have to write this line, of course change the end to get an other manager :D
+With the api you can edit or get user or grade and many other things incoming.
+To the access to the manager you just have to write this line, of course change the end to get another manager :D
 
 ```java
 AzionAPI.getInstance().getUserManager();
@@ -150,14 +150,14 @@ AzionAPI.getInstance().getUserManager();
 
 ### Methods
 
-In all managers you have similar method like :
+In all managers you have similar methods like :
 
 Get an object from the database:
 ```java
 userManager.getUser(uuid);
 ```
 
-Verify if your object exist in the database:
+Verify if your object exists in the database:
 ```java
 userManager.isRegistered(uuid);
 ```
