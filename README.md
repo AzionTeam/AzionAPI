@@ -60,7 +60,7 @@ After that a basic installation of a dependency
   <dependency>
     <groupId>fr.sothis.azionapi</groupId>
     <artifactId>azionapi</artifactId>
-    <version>1.9-SNAPSHOT</version>
+    <version>2.0-SNAPSHOT</version>
   </dependency>
 ```
 

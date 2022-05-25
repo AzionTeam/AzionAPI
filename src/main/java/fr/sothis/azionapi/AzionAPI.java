@@ -58,20 +58,23 @@ public class AzionAPI {
         plugin = plug;
         logger = plug.getLogger();
 
-        databaseManager = new DatabaseManager();
-        databaseManager.init();
+        // startVault();
 
-        listenerManager = new ListenerManager();
-        startVault();
+        if(plug.isEnabled()) {
+            databaseManager = new DatabaseManager();
+            databaseManager.init();
 
-        userManager = new UserManager(databaseManager, econ);
-        gradeManager = new GradeManager(databaseManager);
-        sockets = new Sockets(listenerManager);
-        communication = new Communication(sockets, plug);
-        communication.start(name);
-        reportManager = new ReportManager(databaseManager, listenerManager, sockets);
+            listenerManager = new ListenerManager();
 
-        registerEvent();
+            userManager = new UserManager(databaseManager, econ);
+            gradeManager = new GradeManager(databaseManager);
+            sockets = new Sockets(listenerManager);
+            communication = new Communication(sockets, plug);
+            communication.start(name);
+            reportManager = new ReportManager(databaseManager, listenerManager, sockets);
+
+            registerEvent();
+        }
     }
 
     private static void startVault() {
@@ -90,9 +93,9 @@ public class AzionAPI {
      * Just close the database
      */
     public static void stop() {
-        databaseManager.close();
-        logger.info(String.format("[%s] Disabled Version %s", plugin.getDescription().getName(),
-                plugin.getDescription().getVersion()));
+        if(databaseManager != null) {
+            databaseManager.close();
+        }
     }
 
     /**
