@@ -1,5 +1,9 @@
 package fr.sothis.azionapi.database;
 
+import com.mongodb.ConnectionString;
+import com.mongodb.MongoClientSettings;
+import com.mongodb.MongoCredential;
+import com.mongodb.ServerAddress;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
@@ -15,6 +19,7 @@ import fr.sothis.azionapi.pojo.Report;
 import fr.sothis.azionapi.pojo.User;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 
 import static com.mongodb.MongoClientSettings.getDefaultCodecRegistry;
@@ -35,15 +40,8 @@ public class DatabaseManager {
         CodecProvider pojoCodecProvider = PojoCodecProvider.builder().automatic(true)
                 .conventions(Arrays.asList(Conventions.ANNOTATION_CONVENTION, Conventions.USE_GETTERS_FOR_SETTERS))
                 .build();
-        String uri = "mongodb://Admin:wH7S%26Cofose6TP@192.168.11.201:27017/?authMechanism=DEFAULT" +
-            "&tls=false" +
-            "&zlibCompressionLevel=-1" +
-            "&maxPoolSize=1000" +
-            "&appName=default" +
-            "&directConnection=true" +
-            "&w=majority";
         CodecRegistry codecRegistry = fromRegistries(getDefaultCodecRegistry(), fromProviders(pojoCodecProvider));
-        mongoClient = MongoClients.create(uri);
+        mongoClient = MongoClients.create("mongodb://Admin:wH7S%26Cofose6TP@192.168.11.201:27017/?authMechanism=DEFAULT&tls=false&zlibCompressionLevel=-1&maxPoolSize=1000&appName=defaul&directConnection=true&w=majority");
         mongoDatabase = mongoClient.getDatabase("Azion").withCodecRegistry(codecRegistry);
         users = mongoDatabase.getCollection("users", User.class);
         grades = mongoDatabase.getCollection("grades", Grade.class);

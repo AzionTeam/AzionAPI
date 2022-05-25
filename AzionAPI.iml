@@ -38,10 +38,9 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.persistence:persistence-api:1.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.yaml:snakeyaml:1.15" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: net.md-5:bungeecord-chat:1.8-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: org.mongodb:mongodb-driver-sync:4.6.0" level="project" />
-    <orderEntry type="library" name="Maven: org.mongodb:bson:4.6.0" level="project" />
-    <orderEntry type="library" name="Maven: org.mongodb:mongodb-driver-core:4.6.0" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.mongodb:bson-record-codec:4.6.0" level="project" />
+    <orderEntry type="library" name="Maven: org.mongodb:mongodb-driver-sync:4.4.2" level="project" />
+    <orderEntry type="library" name="Maven: org.mongodb:bson:4.4.2" level="project" />
+    <orderEntry type="library" name="Maven: org.mongodb:mongodb-driver-core:4.4.2" level="project" />
     <orderEntry type="library" name="Maven: io.socket:socket.io-client:2.0.1" level="project" />
     <orderEntry type="library" name="Maven: io.socket:engine.io-client:2.0.0" level="project" />
     <orderEntry type="library" name="Maven: com.squareup.okhttp3:okhttp:3.12.12" level="project" />
