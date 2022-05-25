@@ -1,5 +1,7 @@
 package fr.sothis.azionapi;
 
+import ch.qos.logback.classic.Level;
+import ch.qos.logback.classic.LoggerContext;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoIterable;
 
@@ -23,6 +25,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.RegisteredServiceProvider;
+import org.slf4j.LoggerFactory;
 
 import java.util.logging.Logger;
 
@@ -30,6 +33,7 @@ public class AzionAPI {
 
     private static Plugin plugin;
     private static Logger logger;
+    private static boolean vaultState;
 
     private static AzionAPI instance;
     private static Sockets sockets;
@@ -58,11 +62,12 @@ public class AzionAPI {
         plugin = plug;
         logger = plug.getLogger();
 
-        // startVault();
+        disableLog("org.mongodb");
+        disableLog("org.bson");
 
         if(plug.isEnabled()) {
             databaseManager = new DatabaseManager();
-            databaseManager.init();
+            databaseManager.init(logger, name);
 
             listenerManager = new ListenerManager();
 
@@ -73,19 +78,24 @@ public class AzionAPI {
             communication.start(name);
             reportManager = new ReportManager(databaseManager, listenerManager, sockets);
 
+            vaultState = startVault();
             registerEvent();
         }
     }
 
-    private static void startVault() {
+    private static boolean startVault() {
         if (!setupEconomy()) {
-            logger.severe(String.format("[%s] - Disabled due to no Vault dependency found!",
-                    plugin.getDescription().getName()));
-            plugin.getServer().getPluginManager().disablePlugin(plugin);
-            return;
+            logger.severe("Attention Vault n'est pas dans la liste des plugins !");
+            return false;
         }
         setupPermissions();
         setupChat();
+        return true;
+    }
+
+    private static void disableLog(String name) {
+        ch.qos.logback.classic.Logger rootLogger2 = (ch.qos.logback.classic.Logger) LoggerFactory.getILoggerFactory().getLogger(name);
+        rootLogger2.setLevel(Level.OFF);
     }
 
     /**
@@ -104,7 +114,12 @@ public class AzionAPI {
     private static void registerEvent() {
         PluginManager pm = plugin.getServer().getPluginManager();
 
-        pm.registerEvents(new Join(databaseManager, userManager), plugin);
+        if(vaultState == true) {
+            pm.registerEvents(new Join(databaseManager, userManager), plugin);
+        } else {
+            logger.severe("Attention un event de l'api n'a pas pu etre enregistrer car vault est manquant");
+            logger.severe("Merci de bien vouloir rajouter le plugin afin d'eviter tout problème !");
+        }
     }
 
     public void registerEvent(AzionListener clazz) {

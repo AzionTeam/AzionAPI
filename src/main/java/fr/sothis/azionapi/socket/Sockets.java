@@ -14,7 +14,7 @@ public class Sockets {
     private ClientInterface clientInterface;
 
     public Sockets(ListenerManager listenerManager) {
-        URI uri = URI.create("https://127.0.0.1");
+        URI uri = URI.create("https://192.168.11.201");
         IO.Options options = IO.Options.builder()
                 .build();
 

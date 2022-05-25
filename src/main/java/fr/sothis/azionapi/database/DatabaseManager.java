@@ -17,6 +17,7 @@ import fr.sothis.azionapi.pojo.User;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.logging.Logger;
 
 import static com.mongodb.MongoClientSettings.getDefaultCodecRegistry;
 import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
@@ -32,7 +33,7 @@ public class DatabaseManager {
 
     private HashMap<String, MongoCollection<?>> collections;
 
-    public void init() {
+    public void init(Logger logger, String name) {
         CodecProvider pojoCodecProvider = PojoCodecProvider.builder().automatic(true)
                 .conventions(Arrays.asList(Conventions.ANNOTATION_CONVENTION, Conventions.USE_GETTERS_FOR_SETTERS))
                 .build();
@@ -42,6 +43,8 @@ public class DatabaseManager {
         users = mongoDatabase.getCollection("users", User.class);
         grades = mongoDatabase.getCollection("grades", Grade.class);
         reports = mongoDatabase.getCollection("reports", Report.class);
+
+        logger.info("Plugin '" + name + "' est connecté à la base de données");
     }
 
     public void close() {
